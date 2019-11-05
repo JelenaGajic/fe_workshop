@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Hello Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelector('#form').onsubmit = function() {
+                const name = document.querySelector('#name').value;
+                alert(`Hello ${name}`);
+            }
+        })
+    </script>
+</head>
+<body>
+    <form action="" id="form">
+        <input type="text" id="name" placeholder="Name">
+        <input type="submit">
+    </form>
+</body>
+</html>
+
+<!-- use content of the input filed -->

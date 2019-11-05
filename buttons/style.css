@@ -1,0 +1,22 @@
+.container {
+    text-align: center;
+    margin: 50px auto;
+}
+
+#myBtn1 {
+    background: red;
+    width: 30%;
+    height: 50px;
+}
+
+#myBtn2 {
+    background: green;
+    width: 30%;
+    height: 50px;
+}
+
+#myBtn3 {
+    background: blue;
+    width: 30%;
+    height: 50px;
+}

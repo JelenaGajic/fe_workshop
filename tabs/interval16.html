@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Colors for each</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            setInterval(count, 1000);
+        })
+
+        let counter = 0;
+
+        function count () {
+            counter++;
+            document.querySelector('#counter').innerHTML = counter;
+        }
+    </script>
+</head>
+<body>
+    <h1 id="counter">0</h1>
+</body>
+</html>
+
+<!-- dataset is often used when we want to keep some data tied to elements -->
