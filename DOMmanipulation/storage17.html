@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Colors for each</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script>
+        if(!localStorage.getItem('counter')) {
+            localStorage.setItem('counter', 0);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelector('#counter').innerHTML = localStorage.getItem('counter');
+
+            // set event on click
+            document.querySelector('button').onclick = () => {
+
+                let counter = localStorage.getItem('counter');
+                counter++;
+                localStorage.setItem('counter', counter);
+
+                document.querySelector('#counter').innerHTML = localStorage.getItem('counter');
+
+            }
+        })
+
+        let counter = 0;
+
+        function count () {
+            counter++;
+            document.querySelector('#counter').innerHTML = counter;
+        }
+    </script>
+</head>
+<body>
+    <h1 id="counter">0</h1>
+    <button>Click here!</button>
+</body>
+</html>
+
+<!-- https://www.w3schools.com/html/html5_webstorage.asp -->
+<!-- namespace coalision is per domain, so we are in charge of keeping locale storage w/o conflict -->

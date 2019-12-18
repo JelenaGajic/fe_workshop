@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <script>
+            window.addEventListener('load', myLoadedFn);
+
+            function myLoadedFn () {
+                console.log('load se zavrsio');
+                document.getElementById('btn').addEventListener('click', myClick);
+            }
+            
+            function myClick() {
+                console.log('click se desio');
+                document.getElementById('id1').style.color = 'red';
+            }
+            // Create animations: https://www.w3schools.com/js/tryit.asp?filename=tryjs_dom_animate_3
+            // HomeWork: make the oposite route
+
+            // inteval functions: https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_win_clearinterval
+        </script>
+    </head>
+    <body>
+
+        <h1 id="id1">My Heading 1</h1>
+
+        <button id="btn" type="button">Click Me!</button>
+
+    </body>
+</html>
