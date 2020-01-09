@@ -6,21 +6,17 @@
     <title>Colors for each</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            setInterval(count, 1000);
-        })
-
-        let counter = 0;
-
-        function count () {
-            counter++;
-            document.querySelector('#counter').innerHTML = counter;
-        }
-    </script>
+    <script src="script.js"></script>
 </head>
 <body>
-    <h1 id="counter">0</h1>
+    <h1>tasks</h1>
+    <ul id="tasks">
+
+    </ul>
+    <form action="" id="new-task">
+        <input id="task" type="text" autocomplete="off" placeholder="New task">
+        <input type="submit" id="submit">
+    </form>
 </body>
 </html>
 

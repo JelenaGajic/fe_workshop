@@ -1,0 +1,49 @@
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Onload Eevent</title>
+        <style>
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div>
+            <article>
+                <h2>DOMContentLoaded</h2>
+                <p><b>The DOMContentLoaded</b> event fires when the initial HTML document has been completely loaded and
+                    parsed, without waiting for stylesheets, images, and subframes to finish loading.<br>
+                    DOMContentLoaded – the browser fully loaded HTML, and the DOM tree is built, but external resources
+                    like pictures img and stylesheets may be not yet loaded.
+
+                </p>
+            </article>
+            <article>
+                <h2>Document.readyState</h2>
+                <p>
+                    <b>Document.readyState</b> identifies the loading status of a document.<br>
+                    Used by developers to interact with page at certain loading states.<br>
+                    Used as notable reference events by performance tools and APIs.<br>
+                </p>
+
+                <img src="https://varvy.com/performance/images/document-ready-state-defined.png" alt="google"
+                    width="430px" height="400px">
+            </article>
+            <article>
+                <h2>Window load</h2>
+                <p>The load event on window triggers when the page and all resources are loaded. We rarely use it,
+                    because there’s usually no need to wait for so long.</p>
+            </article>
+        </div>
+        <div class="events">
+            <p class="events"></p>
+        </div>
+        <script src="script.js"></script>
+    </body>
+
+</html>
