@@ -3,11 +3,11 @@
 // let user = {
 //     name: "John",
 //     go: function() { alert(this.name) }
-// }
+// };
 
 // (user.go)()
 
-// -----------------
+// -----------------------------------------
 
 // 2. Explain the value of "this"
 
@@ -28,9 +28,11 @@
 
 // Here we have a more complex call (expression).method(). The call works as if it were split into two lines:
 
-// -----------------
+// -----------------------------------------
 
 // 3. Using "this" in object literal
+
+// window.name = 'Mali Pera';
 
 // function makeUser() {
 //     return {
@@ -40,24 +42,35 @@
 // };
 
 // let user = makeUser();
-
 // console.log(user.ref.name); // What's the result?
 
-// 4. Create an object calculator with three methods:
+// -----------------------------------------
 
+// 4. Create an object calculator with three methods:
 // read() prompts for two values and saves them as object properties.
 // sum() returns the sum of saved values.
 // mul() multiplies saved values and returns the result.
 
-// let calculator = {
-//     // your code here
-// };
+let calculator = {
+    read: function() {
+        var a = prompt('First number is');
+        this.first = a;
+        var b = prompt('Second number is');
+        this.second = b;
+    },
+    sum: function() {
+        return Number.parseInt(this.first) + Number.parseInt(this.second);
+    },
+    mul: function() {
+        return this.first * this.second
+    }
+};
 
-// calculator.read();
-// alert(calculator.sum());
-// alert(calculator.mul());
+calculator.read();
+alert(calculator.sum());
+alert(calculator.mul());
 
-// Chaining
+// Chaining - HOMEWORK
 
 // let ladder = {
 //     step: 0,
