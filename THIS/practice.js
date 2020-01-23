@@ -72,6 +72,19 @@ alert(calculator.mul());
 
 // Chaining - HOMEWORK
 
+read: function() {
+        var a = prompt('First number is');
+        this.first = a;
+        var b = prompt('Second number is');
+        this.second = b;
+    },
+    sum: function() {
+        return Number.parseInt(this.first) + Number.parseInt(this.second);
+    },
+    mul: function() {
+        return this.first * this.second
+    }
+
 // let ladder = {
 //     step: 0,
 //     up() {
