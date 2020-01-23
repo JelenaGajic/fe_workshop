@@ -1,21 +1,23 @@
 // 1. this keyword refers to an object, that object which is executing the current bit of javascript code.
 // console.log(this);
 
-// 2. Every javascript function while executing has a reference to its current execution context
+// // 2. Every javascript function while executing has a reference to its current execution context
 // const user = {
 //     data: [{
-//         name: 'Pera',
-//         age: 29
-//     },
-//     {
-//         name: 'Nik',
-//         age: 28
-//     }],
-//     mojeIme: function () {
+//             name: 'Pera',
+//             age: 29
+//         },
+//         {
+//             name: 'Nik',
+//             age: 28
+//         }
+//     ],
+//     mojeIme: function() {
 //         console.log(this.data[0].name + ' i imam godina ' + this.data[0].age);
 //     }
 // }
-// // user.clickHandler();
+
+// user.clickHandler();
 // document.getElementById('btn').addEventListener('click', user.mojeIme.bind(user))
 
 // ------------------------------------
@@ -23,21 +25,21 @@
 // 2.a)
 
 function bike() {
-  console.log('ovo je log f-je: ' + this.this.bike); // "ovo je log f-je "
+    console.log('ovo je log f-je: ' + this); // "ovo je log f-je "
 }
 
 var name = "Ninja";
-var obj1 = { 
-    name: "Pulsar", 
-    bike: function () {
+var obj1 = {
+    name: "Pulsar",
+    bike: function() {
         console.log('ovo je log f-je: ' + this.name); // "ovo je log f-je "
-    } 
+    }
 };
 var obj2 = { name: "Gixxer", bike: bike };
 
-bike();           // "Ninja" --> default binding
-obj1.bike();      // "Pulsar" --> implicit binding
-obj2.bike();      // "Gixxer" --> implicit binding
+// bike(); // "Ninja" --> default binding
+// console.log(obj1.bike; // "Pulsar" --> implicit binding
+obj2.bike(); // "Gixxer" --> implicit binding
 
 // If we are in strict mode then the default value of this keyword is undefined otherwise this keyword act as global object, it’s called default binding of this keyword. (default is window object in case of browser).
 // when there is an object property which we are calling as a method then that object becomes this object or execution context object for that method, it is implicit binding of this keyword.
@@ -51,33 +53,33 @@ obj2.bike();      // "Gixxer" --> implicit binding
 
 
 // 3. Explicit
-function bike() {
-  console.log(this.bike);
-}
+// function bike() {
+//     console.log(this.bike);
+// }
 
-var name = "Ninja";
-var obj = { name: "Pulsar" }
+// var name = "Ninja";
+// var obj = { name: "Pulsar" }
 
-bike();           // "Ninja"
-bike.call(obj);   // "Pulsar"
+// bike(); // "Ninja"
+// bike.call(obj); // "Pulsar"
 
 
 
 // 4. new keyword - this refers to the new instance
 
-function Person(fn, ln) {
-	this.first_name = fn;
-	this.last_name = ln;
+// function Person(fn, ln) {
+//     this.first_name = fn;
+//     this.last_name = ln;
 
-	this.displayName = function() {
-		console.log(`Name: ${this.first_name} ${this.last_name}`);
-	}
-}
+//     this.displayName = function() {
+//         console.log(`Name: ${this.first_name} ${this.last_name}`);
+//     }
+// }
 
-let person = new Person("John", "Reed");
-person.displayName();  // Prints Name: John Reed
-let person2 = new Person("Paul", "Adams");
-person2.displayName();  // Prints Name: Paul Adams
+// let person = new Person("John", "Reed");
+// person.displayName(); // Prints Name: John Reed
+// let person2 = new Person("Paul", "Adams");
+// person2.displayName(); // Prints Name: Paul Adams
 
 // 5. this refers to the invoker object
 
@@ -146,6 +148,3 @@ person2.displayName();  // Prints Name: Paul Adams
 
 // source: https://www.w3schools.com/js/js_this.asp
 // Homework: https://javascriptissexy.com/understand-javascripts-this-with-clarity-and-master-it/
-
-
-
